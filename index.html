@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Converse code - netools</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+     <!--  manifest  -->
+    <link rel="manifest" href="./manifest.json">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/jpg" href="./img/car-1.jpg" />
+
+    <meta name="theme-color" content="#2A3443" />
+    <meta name="description" content="Carzone web application" />
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="./img/96X96.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-title" content="Carzone" />
+
+    <!-- manifest ends -->
+
+  </head>
+  <body>
+    
+    <div class="page_loader"></div>
+
+    <div class="main">
+      <div class="container">
+        <header>
+          <a href="./tabela.png"><h3>Conversor de Códigos</h3></a>
+          <h6>sistema de conversao de codigos</h6>
+        </header>
+        <form onsubmit="calcular(); return false;">
+         <div class="campoTexto">
+           <i class='bx bx-calculator'></i>
+           <input type="text" id="inputValue" placeholder="Valor">           
+            <select id="inputBase">
+              <option value="10">decimal</option>
+              <option value="2">Binário</option>
+              <option value="8">Octal</option>
+              <option value="16">Hexadecimal</option>
+            </select>
+         </div>
+         <div class="dados">
+            <h2>Converter para</h2>
+            <select id="inputBase2">
+              <option value="2">Binário</option>
+              <option value="10">decimal</option>
+              <option value="8">Octal</option>
+              <option value="16">Hexadecimal</option>
+            </select><br>
+            <input type="submit" value="Converter" />
+         </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="result">
+      <span>Resultado</span>
+      <p id="output">Convertido!</p>
+    </div>
+
+    <footer>
+      <h3>walteralexandresantana@gmail.com</h3>
+    </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        // Verifica se o navegador suporta o Service Worker
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+              .then(registration => {
+                console.log('Service Worker registrado com sucesso: ', registration);
+              })
+              .catch(error => {
+                console.log('Service Worker falhou: ', error);
+              });
+          });
+        }
+    </script>
+  </body>
+</html>
