@@ -1,6 +1,6 @@
 {
     "name": "CarZone",
-    "short_name": "Carzone",
+    "short_name": "base numeric",
     "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#2A3443",
