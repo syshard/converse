@@ -1,5 +1,5 @@
 {
-    "name": "CarZone",
+    "name": "base numeric",
     "short_name": "base numeric",
     "start_url": "./index.html",
     "display": "standalone",
